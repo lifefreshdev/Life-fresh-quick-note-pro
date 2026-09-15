@@ -1,0 +1,154 @@
+package com.example.ai.chat.provider
+
+import android.util.Log
+import com.example.ai.chat.config.AIConfig
+import com.example.ai.chat.model.ChatMessage
+import com.example.ai.chat.model.ChatRole
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import okhttp3.RequestBody.Companion.toRequestBody
+import org.json.JSONArray
+import org.json.JSONObject
+import java.io.IOException
+import java.net.SocketTimeoutException
+import java.util.concurrent.TimeUnit
+
+class GroqProvider(
+    private val apiKeyProvider: () -> String = { AIConfig.groqApiKey },
+    private val client: OkHttpClient = OkHttpClient.Builder()
+        .connectTimeout(20, TimeUnit.SECONDS)
+        .readTimeout(45, TimeUnit.SECONDS)
+        .writeTimeout(20, TimeUnit.SECONDS)
+        .build(),
+    private val modelName: String = "openai/gpt-oss-120b"
+) : AIProvider {
+    override val name: String = "Groq"
+    override val isConfigured: Boolean
+        get() = apiKeyProvider().isNotBlank()
+
+    override suspend fun generateResponse(
+        messages: List<ChatMessage>,
+        systemInstruction: String
+    ): AIProviderResult = withContext(Dispatchers.IO) {
+        val apiKey = apiKeyProvider()
+        if (apiKey.isBlank()) {
+            return@withContext AIProviderResult.Failure(
+                providerName = name,
+                errorMessage = "Groq API key is not configured.",
+                isRetryable = false,
+                isRateLimitOrTimeout = false
+            )
+        }
+
+        try {
+            val jsonMessages = JSONArray()
+            if (systemInstruction.isNotBlank()) {
+                jsonMessages.put(JSONObject().apply {
+                    put("role", "system")
+                    put("content", systemInstruction)
+                })
+            }
+
+            val recentMessages = if (messages.size > 20) messages.takeLast(20) else messages
+            for (msg in recentMessages) {
+                if (msg.isError || msg.content.isBlank()) continue
+                val role = when (msg.role) {
+                    ChatRole.USER -> "user"
+                    ChatRole.ASSISTANT -> "assistant"
+                    ChatRole.SYSTEM -> "system"
+                }
+                jsonMessages.put(JSONObject().apply {
+                    put("role", role)
+                    put("content", msg.content)
+                })
+            }
+
+            val requestJson = JSONObject().apply {
+                put("model", modelName)
+                put("messages", jsonMessages)
+                put("temperature", 0.7)
+                put("max_tokens", 3072)
+            }
+            val request = Request.Builder()
+                .url("https://api.groq.com/openai/v1/chat/completions")
+                .addHeader("Authorization", "Bearer $apiKey")
+                .addHeader("Content-Type", "application/json")
+                .post(requestJson.toString().toRequestBody("application/json; charset=utf-8".toMediaType()))
+                .build()
+
+            client.newCall(request).execute().use { response ->
+                val responseBodyString = response.body?.string().orEmpty()
+                if (!response.isSuccessful) {
+                    val code = response.code
+                    val isRateLimit = code == 429
+                    val isAuthError = code == 401 || code == 403
+                    Log.w(TAG, "Groq HTTP error code=$code")
+                    return@withContext AIProviderResult.Failure(
+                        providerName = name,
+                        errorMessage = if (isRateLimit) "Groq rate limit exceeded." else "Groq service is unavailable.",
+                        isRetryable = !isAuthError,
+                        isRateLimitOrTimeout = isRateLimit
+                    )
+                }
+                if (responseBodyString.isBlank()) {
+                    return@withContext AIProviderResult.Failure(
+                        providerName = name,
+                        errorMessage = "Empty response from Groq.",
+                        isRetryable = true
+                    )
+                }
+
+                val choices = JSONObject(responseBodyString).optJSONArray("choices")
+                if (choices != null && choices.length() > 0) {
+                    val content = choices.getJSONObject(0)
+                        .optJSONObject("message")
+                        ?.optString("content", "")
+                        ?.trim()
+                    if (!content.isNullOrBlank()) {
+                        return@withContext AIProviderResult.Success(content, name)
+                    }
+                }
+                AIProviderResult.Failure(
+                    providerName = name,
+                    errorMessage = "No response content generated by Groq.",
+                    isRetryable = true
+                )
+            }
+        } catch (cancelled: CancellationException) {
+            throw cancelled
+        } catch (e: SocketTimeoutException) {
+            Log.w(TAG, "Groq request timed out", e)
+            AIProviderResult.Failure(
+                providerName = name,
+                errorMessage = "Groq request timed out.",
+                isRetryable = true,
+                isRateLimitOrTimeout = true,
+                cause = e
+            )
+        } catch (e: IOException) {
+            Log.w(TAG, "Groq network I/O error", e)
+            AIProviderResult.Failure(
+                providerName = name,
+                errorMessage = "Network connection error reaching Groq.",
+                isRetryable = true,
+                cause = e
+            )
+        } catch (e: Exception) {
+            Log.e(TAG, "Unexpected error in GroqProvider", e)
+            AIProviderResult.Failure(
+                providerName = name,
+                errorMessage = "Failed to communicate with Groq.",
+                isRetryable = true,
+                cause = e
+            )
+        }
+    }
+
+    companion object {
+        private const val TAG = "GroqProvider"
+    }
+}

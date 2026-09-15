@@ -1,0 +1,213 @@
+<resources>
+    <string name="app_name">LifeFresh QuickNote Pro</string>
+    <string name="default_web_client_id">866058093989-uothf0peli4tlege6mnsa9e2e5e3u1jl.apps.googleusercontent.com</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">डैशबोर्ड</string>
+    <string name="nav_leads">लीड्स</string>
+    <string name="nav_ai">एआई</string>
+    <string name="nav_reports">रिपोर्ट्स</string>
+    <string name="nav_settings">सेटिंग्स</string>
+    <string name="add_customer_context">नया ग्राहक जोड़ें</string>
+
+    <!-- Dashboard -->
+    <string name="dash_title">विश्लेषण और प्रदर्शन</string>
+    <string name="dash_performance_overview">प्रदर्शन अवलोकन</string>
+    <string name="dash_total_leads">कुल लीड्स</string>
+    <string name="dash_active_leads">सक्रिय लीड्स</string>
+    <string name="dash_pending">लंबित</string>
+    <string name="dash_complete">पूर्ण</string>
+    <string name="dash_completed">पूर्ण हो चुके</string>
+    <string name="dash_conversion_rate">रूपांतरण दर</string>
+    <string name="dash_today_reminders">आज के रिमाइंडर्स</string>
+    <string name="dash_upcoming_reminders">आगामी रिमाइंडर्स</string>
+    <string name="dash_overdue_reminders">अतिदेय रिमाइंडर्स</string>
+    <string name="dash_recent_followups">हालिया क्लाइंट फॉलो-अप</string>
+    <string name="dash_no_followups">कोई हालिया फॉलो-अप निर्धारित नहीं है</string>
+    <string name="dash_view_profile">प्रोफाइल देखें</string>
+    <string name="dash_followup_due">फॉलो-अप का समय</string>
+    <string name="dash_pipeline_status">लीड पाइपलाइन स्थिति</string>
+    <string name="dash_lead_breakdown">लीड विवरण</string>
+    <string name="dash_quick_action">त्वरित कार्रवाई</string>
+    <string name="dash_open_ai">एआई खोलें</string>
+
+    <!-- Leads Tab -->
+    <string name="leads_search_placeholder">नाम, फोन, बीमारी से खोजें…</string>
+    <string name="leads_filter_all">सभी</string>
+    <string name="leads_filter_pending">लंबित</string>
+    <string name="leads_filter_complete">पूर्ण</string>
+    <string name="leads_filter_archived">संग्रहीत</string>
+    <string name="leads_sort_by">क्रमबद्ध करें</string>
+    <string name="leads_sort_newest">नए पहले</string>
+    <string name="leads_sort_oldest">पुराने पहले</string>
+    <string name="leads_sort_name_asc">नाम (अ-ज्ञ)</string>
+    <string name="leads_sort_name_desc">नाम (ज्ञ-अ)</string>
+    <string name="leads_no_leads">कोई लीड नहीं मिली</string>
+    <string name="leads_add_prompt">+ बटन से अपनी पहली लीड जोड़ें</string>
+    <string name="leads_confirm_delete_title">हटाने की पुष्टि करें</string>
+    <string name="leads_confirm_delete_msg">क्या आप वाकई इस लीड को हटाना चाहते हैं? इस क्रिया को पूर्ववत नहीं किया जा सकता।</string>
+    <string name="leads_action_call">कॉल करें</string>
+    <string name="leads_action_whatsapp">व्हाट्सएप</string>
+    <string name="leads_action_sms">संदेश</string>
+    <string name="leads_action_edit">संपादित करें</string>
+    <string name="leads_action_delete">हटाएं</string>
+    <string name="leads_action_archive">संग्रह करें</string>
+    <string name="leads_action_restore">पुनर्स्थापित करें</string>
+    <string name="leads_total_count">कुल लीड्स</string>
+
+    <!-- Lead Form Dialog -->
+    <string name="form_add_title">नया लीड जोड़ें</string>
+    <string name="form_edit_title">लीड संपादित करें</string>
+    <string name="form_client_name">क्लाइंट का नाम</string>
+    <string name="form_client_name_hint">पूरा नाम दर्ज करें</string>
+    <string name="form_phone_number">फ़ोन नंबर</string>
+    <string name="form_phone_number_hint">10 अंकों का नंबर दर्ज करें</string>
+    <string name="form_category_disease">श्रेणी / बीमारी</string>
+    <string name="form_category_hint">बीमारी चुनें या लिखें</string>
+    <string name="form_status">स्थिति</string>
+    <string name="form_reminder_date">रिमाइंडर तिथि</string>
+    <string name="form_reminder_time">रिमाइंडर समय</string>
+    <string name="form_reminder_note">रिमाइंडर नोट</string>
+    <string name="form_notes">कोचिंग और सामान्य नोट्स</string>
+    <string name="form_btn_save">लीड सहेजें</string>
+    <string name="form_btn_update">लीड अपडेट करें</string>
+    <string name="form_btn_cancel">रद्द करें</string>
+
+    <!-- Client Profile Dialog -->
+    <string name="profile_dialog_title">क्लाइंट प्रोफाइल</string>
+    <string name="profile_contact_info">संपर्क विवरण</string>
+    <string name="profile_phone">फ़ोन</string>
+    <string name="profile_disease">बीमारी / श्रेणी</string>
+    <string name="profile_status">स्थिति</string>
+    <string name="profile_reminder_followup">रिमाइंडर और फॉलो-अप</string>
+    <string name="profile_no_reminder">कोई रिमाइंडर सेट नहीं है</string>
+    <string name="profile_coaching_notes">कोचिंग नोट्स</string>
+    <string name="profile_no_notes">कोई नोट्स दर्ज नहीं हैं</string>
+    <string name="profile_activity_history">गतिविधि इतिहास</string>
+    <string name="profile_created_on">निर्माण तिथि</string>
+    <string name="profile_last_updated">अंतिम अपडेट</string>
+    <string name="profile_quick_actions">त्वरित क्रियाएं</string>
+    <string name="profile_close">बंद करें</string>
+    <string name="profile_edit">प्रोफाइल संपादित करें</string>
+
+    <!-- Alarm & Reminders -->
+    <string name="alarm_disabled_title">रिमाइंडर अलार्म अक्षम हैं</string>
+    <string name="alarm_disabled_msg">सटीक अलार्म अनुमति सक्षम होने तक लाइफफ्रेश रिमाइंडर अलार्म नहीं बजा सकता। कृपया सेटिंग्स में जाकर अनुमति चालू करें।</string>
+    <string name="alarm_enable_permission">सटीक अलार्म सक्षम करें</string>
+    <string name="alarm_remind_later">बाद में याद दिलाएं</string>
+    <string name="alarm_ringing_title">कल्याण चेतावनी</string>
+    <string name="alarm_wellness_client">कल्याण क्लाइंट</string>
+    <string name="alarm_btn_snooze">स्नूज़ करें</string>
+    <string name="alarm_btn_dismiss">खारिज करें</string>
+    <string name="alarm_btn_complete">पूर्ण करें</string>
+
+    <!-- Reports -->
+    <string name="reports_title">सीआरएम रिपोर्ट्स और सारांश</string>
+    <string name="reports_export_pdf">पीडीएफ रिपोर्ट निर्यात करें</string>
+    <string name="reports_share_pdf">पीडीएफ रिपोर्ट साझा करें</string>
+    <string name="reports_overview">रिपोर्ट अवलोकन</string>
+    <string name="reports_lead_statistics">लीड आंकड़े</string>
+    <string name="reports_total_registered">कुल पंजीकृत ग्राहक</string>
+    <string name="reports_pending_followups">लंबित फॉलो-अप</string>
+    <string name="reports_completed_conversions">पूर्ण रूपांतरण</string>
+    <string name="reports_pdf_success">पीडीएफ रिपोर्ट सफलतापूर्वक बनाई गई</string>
+    <string name="reports_download">रिपोर्ट डाउनलोड करें</string>
+
+    <!-- Settings -->
+    <string name="settings_title">सेटिंग्स</string>
+    <string name="settings_my_profile">मेरी प्रोफाइल</string>
+    <string name="settings_my_profile_sub">प्रोफाइल विवरण और खाता विधियों का प्रबंधन करें</string>
+    <string name="settings_dark_theme">डार्क थीम</string>
+    <string name="settings_dark_theme_sub">लाइट और डार्क थीम के बीच स्विच करें</string>
+    <string name="settings_app_language">ऐप की भाषा</string>
+    <string name="settings_app_language_sub">ऐप के लिए प्रदर्शन भाषा चुनें</string>
+    <string name="settings_alarm_settings">अलार्म सेटिंग्स</string>
+    <string name="settings_alarm_settings_sub">रिमाइंडर, रिंग मोड, वॉल्यूम और ध्वनियां कॉन्फ़िगर करें</string>
+    <string name="settings_cloud_backup">क्लाउड बैकअप</string>
+    <string name="settings_cloud_backup_sub">डेटाबेस को सुरक्षित रूप से सिंक, बैकअप और रीस्टोर करें</string>
+    <string name="settings_account_data">खाता और डेटा</string>
+    <string name="settings_account_data_sub">खाता हटाने के नियम, 7-दिवसीय छूट अवधि और डेटा प्रबंधित करें</string>
+    <string name="settings_about_support">ऐप के बारे में और सहायता</string>
+    <string name="settings_about_support_sub">परिवर्तन लॉग, नीति शर्तें और समर्थन विवरण</string>
+    <string name="settings_sign_out">लॉग आउट करें</string>
+    <string name="settings_exit_guest">गेस्ट मोड से बाहर निकलें</string>
+    <string name="settings_select_language">ऐप की भाषा चुनें</string>
+    <string name="settings_language_changed">भाषा सफलतापूर्वक बदल दी गई है</string>
+    <string name="settings_btn_back">सेटिंग्स पर वापस जाएं</string>
+
+    <!-- Auth -->
+    <string name="auth_welcome_title">लाइफफ्रेश में आपका स्वागत है</string>
+    <string name="auth_welcome_subtitle">स्मार्ट क्लाइंट प्रबंधन और रिमाइंडर सीआरएम</string>
+    <string name="auth_sign_in">साइन इन करें</string>
+    <string name="auth_create_account">खाता बनाएं</string>
+    <string name="auth_continue_guest">अतिथि के रूप में जारी रखें</string>
+    <string name="auth_email">ईमेल पता</string>
+    <string name="auth_password">पासवर्ड</string>
+    <string name="auth_forgot_password">पासवर्ड भूल गए?</string>
+    <string name="auth_no_account">खाता नहीं है? साइन अप करें</string>
+    <string name="auth_already_account">पहले से खाता है? साइन इन करें</string>
+
+    <!-- AI Screen -->
+    <string name="ai_title">लाइफफ्रेश एआई</string>
+    <string name="ai_placeholder">लाइफफ्रेश एआई को संदेश भेजें</string>
+    <string name="ai_thinking">सोच रहा है…</string>
+    <string name="ai_help_prompt">आज मैं आपकी क्या मदद कर सकता हूँ?</string>
+    <string name="ai_new_chat">नई बातचीत</string>
+    <string name="ai_clear_chat">बातचीत साफ़ करें</string>
+
+    <!-- Common -->
+    <string name="common_ok">ठीक है</string>
+    <string name="common_cancel">रद्द करें</string>
+    <string name="common_save">सहेजें</string>
+    <string name="common_delete">हटाएं</string>
+    <string name="common_edit">संपादित करें</string>
+    <string name="common_close">बंद करें</string>
+    <string name="common_confirm">पुष्टि करें</string>
+    <string name="dash_ai_assistant_card">त्वरित विश्लेषण और सीआरएम कार्यों के लिए लाइफफ्रेश एआई से पूछें</string>
+    <string name="leads_filter_today">आज</string>
+    <string name="leads_filter_upcoming">आगामी</string>
+    <string name="leads_filter_overdue">अतिदेय</string>
+    <string name="form_other_disease_hint">अन्य बीमारी का नाम दर्ज करें</string>
+    <string name="form_relation">संबंध</string>
+    <string name="form_relation_hint">संबंध चुनें (उदा. स्वयं, परिवार)</string>
+    <string name="form_reminder_note_hint">उदा. पोषण योजना पर चर्चा करनी है</string>
+    <string name="form_notes_hint">यहाँ नोट्स लिखें...</string>
+    <string name="form_err_name_required">कृपया क्लाइंट का नाम दर्ज करें</string>
+    <string name="form_err_phone_invalid">कृपया मान्य फ़ोन नंबर दर्ज करें</string>
+    <string name="form_err_duplicate_phone">इस फ़ोन नंबर से लीड पहले से मौजूद है</string>
+    <string name="form_err_duplicate_reminder">इस तिथि और समय पर दूसरा रिमाइंडर पहले से निर्धारित है</string>
+    <string name="profile_last_call">अंतिम कॉल</string>
+    <string name="alarm_scheduled_date">निर्धारित तिथि</string>
+    <string name="alarm_scheduled_time">निर्धारित समय</string>
+    <string name="alarm_reminder_note_label">रिमाइंडर नोट</string>
+    <string name="alarm_snooze_section">रिमाइंडर स्नूज़ करें</string>
+    <string name="alarm_min">मिनट</string>
+    <string name="reports_pdf_guide">अपने लीड्स, फॉलो-अप और रूपांतरण आंकड़ों का पूरा सारांश पीडीएफ प्रारूप में तैयार करें।</string>
+    <string name="settings_language_manager">भाषा प्रबंधक</string>
+    <string name="settings_bundled_languages">अंतर्निहित भाषाएं</string>
+    <string name="settings_downloadable_languages">उपलब्ध भाषा पैक</string>
+    <string name="settings_lang_installed">स्थापित</string>
+    <string name="settings_lang_download">डाउनलोड करें</string>
+    <string name="settings_lang_downloading">डाउनलोड हो रहा है...</string>
+    <string name="settings_lang_apply">लागू करें</string>
+    <string name="settings_lang_remove">हटाएं</string>
+    <string name="settings_lang_retry">पुनः प्रयास करें</string>
+    <string name="settings_lang_download_failed">डाउनलोड विफल</string>
+    <string name="settings_lang_remove_confirm">भाषा पैक हटाएं?</string>
+    <string name="settings_lang_remove_desc">भाषा पैक फाइलें स्थानीय स्टोरेज से हटा दी जाएंगी।</string>
+    <string name="settings_cancel">रद्द करें</string>
+    <string name="settings_save">सहेजें</string>
+    <string name="auth_email_hint">अपना ईमेल दर्ज करें</string>
+    <string name="auth_password_hint">पासवर्ड दर्ज करें</string>
+    <string name="auth_reset_password_title">पासवर्ड रीसेट करें</string>
+    <string name="auth_reset_password_btn">रीसेट लिंक भेजें</string>
+    <string name="auth_back_to_sign_in">साइन इन पर वापस जाएं</string>
+    <string name="ai_suggestion_1">लंबित क्लाइंट रिमाइंडर्स दिखाएं</string>
+    <string name="ai_suggestion_2">क्लाइंट फॉलो-अप कैसे व्यवस्थित करें?</string>
+    <string name="ai_suggestion_3">कल सुबह 10 बजे का फॉलो-अप बनाएं</string>
+    <string name="ai_error_connection">लाइफफ्रेश एआई से कनेक्ट नहीं हो सका।</string>
+    <string name="ai_error_retry">पुनः प्रयास करें</string>
+    <string name="common_success">सफल</string>
+    <string name="common_error">त्रुटि</string>
+    <string name="common_loading">लोड हो रहा है...</string>
+</resources>

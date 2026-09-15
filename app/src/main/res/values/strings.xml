@@ -1,0 +1,213 @@
+<resources>
+    <string name="app_name">LifeFresh QuickNote Pro</string>
+    <string name="default_web_client_id">866058093989-uothf0peli4tlege6mnsa9e2e5e3u1jl.apps.googleusercontent.com</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_leads">Leads</string>
+    <string name="nav_ai">AI</string>
+    <string name="nav_reports">Reports</string>
+    <string name="nav_settings">Settings</string>
+    <string name="add_customer_context">Add Customer Context</string>
+
+    <!-- Dashboard -->
+    <string name="dash_title">Analytics &amp; Performance</string>
+    <string name="dash_performance_overview">Performance Overview</string>
+    <string name="dash_total_leads">Total Leads</string>
+    <string name="dash_active_leads">Active Leads</string>
+    <string name="dash_pending">Pending</string>
+    <string name="dash_complete">Complete</string>
+    <string name="dash_completed">Completed</string>
+    <string name="dash_conversion_rate">Conversion Rate</string>
+    <string name="dash_today_reminders">Today\'s Reminders</string>
+    <string name="dash_upcoming_reminders">Upcoming Reminders</string>
+    <string name="dash_overdue_reminders">Overdue Reminders</string>
+    <string name="dash_recent_followups">Recent Client Follow-ups</string>
+    <string name="dash_no_followups">No recent follow-ups scheduled</string>
+    <string name="dash_view_profile">View Profile</string>
+    <string name="dash_followup_due">Follow-up due</string>
+    <string name="dash_pipeline_status">Lead Pipeline Status</string>
+    <string name="dash_lead_breakdown">Lead Breakdown</string>
+    <string name="dash_quick_action">Quick Action</string>
+    <string name="dash_open_ai">Open AI</string>
+
+    <!-- Leads Tab -->
+    <string name="leads_search_placeholder">Search leads by name, phone, disease…</string>
+    <string name="leads_filter_all">All</string>
+    <string name="leads_filter_pending">Pending</string>
+    <string name="leads_filter_complete">Complete</string>
+    <string name="leads_filter_archived">Archived</string>
+    <string name="leads_sort_by">Sort by</string>
+    <string name="leads_sort_newest">Newest First</string>
+    <string name="leads_sort_oldest">Oldest First</string>
+    <string name="leads_sort_name_asc">Name (A-Z)</string>
+    <string name="leads_sort_name_desc">Name (Z-A)</string>
+    <string name="leads_no_leads">No leads found</string>
+    <string name="leads_add_prompt">Add your first lead using the + button</string>
+    <string name="leads_confirm_delete_title">Confirm Delete</string>
+    <string name="leads_confirm_delete_msg">Are you sure you want to delete this lead? This action cannot be undone.</string>
+    <string name="leads_action_call">Call</string>
+    <string name="leads_action_whatsapp">WhatsApp</string>
+    <string name="leads_action_sms">SMS</string>
+    <string name="leads_action_edit">Edit</string>
+    <string name="leads_action_delete">Delete</string>
+    <string name="leads_action_archive">Archive</string>
+    <string name="leads_action_restore">Restore</string>
+    <string name="leads_total_count">Total Leads</string>
+
+    <!-- Lead Form Dialog -->
+    <string name="form_add_title">Add New Lead</string>
+    <string name="form_edit_title">Edit Lead</string>
+    <string name="form_client_name">Client Name</string>
+    <string name="form_client_name_hint">Enter full name</string>
+    <string name="form_phone_number">Phone Number</string>
+    <string name="form_phone_number_hint">Enter 10-digit number</string>
+    <string name="form_category_disease">Category / Disease</string>
+    <string name="form_category_hint">Select or type category</string>
+    <string name="form_status">Status</string>
+    <string name="form_reminder_date">Reminder Date</string>
+    <string name="form_reminder_time">Reminder Time</string>
+    <string name="form_reminder_note">Reminder Note</string>
+    <string name="form_notes">Coaching / General Notes</string>
+    <string name="form_btn_save">Save Lead</string>
+    <string name="form_btn_update">Update Lead</string>
+    <string name="form_btn_cancel">Cancel</string>
+
+    <!-- Client Profile Dialog -->
+    <string name="profile_dialog_title">Client Profile</string>
+    <string name="profile_contact_info">Contact Information</string>
+    <string name="profile_phone">Phone</string>
+    <string name="profile_disease">Disease / Issue</string>
+    <string name="profile_status">Status</string>
+    <string name="profile_reminder_followup">Reminder &amp; Follow-up</string>
+    <string name="profile_no_reminder">No reminder set</string>
+    <string name="profile_coaching_notes">Coaching Notes</string>
+    <string name="profile_no_notes">No notes recorded</string>
+    <string name="profile_activity_history">Activity History</string>
+    <string name="profile_created_on">Created on</string>
+    <string name="profile_last_updated">Last updated</string>
+    <string name="profile_quick_actions">Quick Actions</string>
+    <string name="profile_close">Close</string>
+    <string name="profile_edit">Edit Profile</string>
+
+    <!-- Alarm & Reminders -->
+    <string name="alarm_disabled_title">Reminder Alarms Disabled</string>
+    <string name="alarm_disabled_msg">LifeFresh QuickNote Pro cannot ring reminder alarms until Exact Alarm permission is enabled in Android Settings.</string>
+    <string name="alarm_enable_permission">Enable Exact Alarms</string>
+    <string name="alarm_remind_later">Remind Me Later</string>
+    <string name="alarm_ringing_title">Wellness Alert</string>
+    <string name="alarm_wellness_client">Wellness Client</string>
+    <string name="alarm_btn_snooze">Snooze</string>
+    <string name="alarm_btn_dismiss">Dismiss</string>
+    <string name="alarm_btn_complete">Complete</string>
+
+    <!-- Reports -->
+    <string name="reports_title">CRM Reports &amp; Summary</string>
+    <string name="reports_export_pdf">Export PDF Report</string>
+    <string name="reports_share_pdf">Share PDF Report</string>
+    <string name="reports_overview">Report Overview</string>
+    <string name="reports_lead_statistics">Lead Statistics</string>
+    <string name="reports_total_registered">Total Registered Clients</string>
+    <string name="reports_pending_followups">Pending Follow-ups</string>
+    <string name="reports_completed_conversions">Completed Conversions</string>
+    <string name="reports_pdf_success">PDF generated successfully</string>
+    <string name="reports_download">Download Report</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_my_profile">My Profile</string>
+    <string name="settings_my_profile_sub">Manage your profile details and account methods</string>
+    <string name="settings_dark_theme">Dark Theme</string>
+    <string name="settings_dark_theme_sub">Toggle between light and dark visual themes</string>
+    <string name="settings_app_language">App Language</string>
+    <string name="settings_app_language_sub">Choose display language for the app</string>
+    <string name="settings_alarm_settings">Alarm Settings</string>
+    <string name="settings_alarm_settings_sub">Configure reminders, ring modes, volumes and sounds</string>
+    <string name="settings_cloud_backup">Cloud Backup</string>
+    <string name="settings_cloud_backup_sub">Sync, backup and restore your database safely</string>
+    <string name="settings_account_data">Account &amp; Data</string>
+    <string name="settings_account_data_sub">Manage account deletion rules, 7-day grace period and data</string>
+    <string name="settings_about_support">About &amp; Support</string>
+    <string name="settings_about_support_sub">Changelog, policy terms, and support details</string>
+    <string name="settings_sign_out">Sign Out</string>
+    <string name="settings_exit_guest">Exit Guest Mode</string>
+    <string name="settings_select_language">Select App Language</string>
+    <string name="settings_language_changed">Language changed successfully</string>
+    <string name="settings_btn_back">Back to Settings</string>
+
+    <!-- Auth -->
+    <string name="auth_welcome_title">Welcome to LifeFresh</string>
+    <string name="auth_welcome_subtitle">Smart Client Management &amp; Reminder CRM</string>
+    <string name="auth_sign_in">Sign In</string>
+    <string name="auth_create_account">Create Account</string>
+    <string name="auth_continue_guest">Continue as Guest</string>
+    <string name="auth_email">Email Address</string>
+    <string name="auth_password">Password</string>
+    <string name="auth_forgot_password">Forgot Password?</string>
+    <string name="auth_no_account">Don\'t have an account? Sign Up</string>
+    <string name="auth_already_account">Already have an account? Sign In</string>
+
+    <!-- AI Screen -->
+    <string name="ai_title">LifeFresh AI</string>
+    <string name="ai_placeholder">Message LifeFresh AI</string>
+    <string name="ai_thinking">Thinking…</string>
+    <string name="ai_help_prompt">How can I help you today?</string>
+    <string name="ai_new_chat">New Chat</string>
+    <string name="ai_clear_chat">Clear Chat</string>
+
+    <!-- Common -->
+    <string name="common_ok">OK</string>
+    <string name="common_cancel">Cancel</string>
+    <string name="common_save">Save</string>
+    <string name="common_delete">Delete</string>
+    <string name="common_edit">Edit</string>
+    <string name="common_close">Close</string>
+    <string name="common_confirm">Confirm</string>
+    <string name="dash_ai_assistant_card">Ask LifeFresh AI for instant analytics &amp; CRM actions</string>
+    <string name="leads_filter_today">Today</string>
+    <string name="leads_filter_upcoming">Upcoming</string>
+    <string name="leads_filter_overdue">Overdue</string>
+    <string name="form_other_disease_hint">Enter custom disease/category</string>
+    <string name="form_relation">Relation</string>
+    <string name="form_relation_hint">Select relation (e.g. Self, Family)</string>
+    <string name="form_reminder_note_hint">e.g. Discuss nutrition plan</string>
+    <string name="form_notes_hint">Add notes here...</string>
+    <string name="form_err_name_required">Please enter client name</string>
+    <string name="form_err_phone_invalid">Please enter a valid phone number</string>
+    <string name="form_err_duplicate_phone">A lead with this phone number already exists</string>
+    <string name="form_err_duplicate_reminder">Another reminder is already scheduled for this date and time</string>
+    <string name="profile_last_call">Last call</string>
+    <string name="alarm_scheduled_date">Scheduled Date</string>
+    <string name="alarm_scheduled_time">Scheduled Time</string>
+    <string name="alarm_reminder_note_label">Reminder Note</string>
+    <string name="alarm_snooze_section">Snooze Reminder</string>
+    <string name="alarm_min">Min</string>
+    <string name="reports_pdf_guide">Generate a complete summary of your leads, follow-ups, and conversion metrics in standard PDF format.</string>
+    <string name="settings_language_manager">Language Manager</string>
+    <string name="settings_bundled_languages">Bundled Languages</string>
+    <string name="settings_downloadable_languages">Available Language Packs</string>
+    <string name="settings_lang_installed">Installed</string>
+    <string name="settings_lang_download">Download</string>
+    <string name="settings_lang_downloading">Downloading...</string>
+    <string name="settings_lang_apply">Apply</string>
+    <string name="settings_lang_remove">Remove</string>
+    <string name="settings_lang_retry">Retry</string>
+    <string name="settings_lang_download_failed">Download failed</string>
+    <string name="settings_lang_remove_confirm">Remove Language Pack?</string>
+    <string name="settings_lang_remove_desc">The language pack files will be removed from local storage. You can re-download it anytime.</string>
+    <string name="settings_cancel">Cancel</string>
+    <string name="settings_save">Save</string>
+    <string name="auth_email_hint">Enter your email</string>
+    <string name="auth_password_hint">Enter password</string>
+    <string name="auth_reset_password_title">Reset Password</string>
+    <string name="auth_reset_password_btn">Send Reset Link</string>
+    <string name="auth_back_to_sign_in">Back to Sign In</string>
+    <string name="ai_suggestion_1">Show me pending client reminders</string>
+    <string name="ai_suggestion_2">How to organize client follow-ups?</string>
+    <string name="ai_suggestion_3">Create a follow-up for tomorrow at 10 AM</string>
+    <string name="ai_error_connection">Couldn\'t connect to LifeFresh AI.</string>
+    <string name="ai_error_retry">Retry</string>
+    <string name="common_success">Success</string>
+    <string name="common_error">Error</string>
+    <string name="common_loading">Loading...</string>
+</resources>

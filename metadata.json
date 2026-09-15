@@ -1,0 +1,8 @@
+{
+  "name": "Remix LifeFresh Quick Note Pro",
+  "description": "Native Android CRM \u0026 Quick Notes App converted from LifeFresh CRM with native search, multi-select disease filters, audio alarm reminders, data backup tools \u0026 reports PDF exports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

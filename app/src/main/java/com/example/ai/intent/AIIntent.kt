@@ -1,0 +1,13 @@
+package com.example.ai.intent
+
+enum class AIIntent {
+    SHOW_PENDING_LEADS,
+    SHOW_TODAY_REMINDERS,
+    SHOW_WEEKLY_REPORT,
+    OPEN_ADD_LEAD,
+    CREATE_LEAD,
+    CREATE_REMINDER,
+    UPDATE_LEAD_STATUS,
+    ADD_LEAD_NOTE,
+    UNKNOWN
+}

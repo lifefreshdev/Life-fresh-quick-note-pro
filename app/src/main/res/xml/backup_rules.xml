@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- CRM records and account-scoped sync state must never be restored onto another device/user. -->
+    <exclude domain="database" path="." />
+    <exclude domain="sharedpref" path="lifefresh_active_account_prefs.xml" />
+    <exclude domain="sharedpref" path="lifefresh_sync_preferences.xml" />
+    <exclude domain="sharedpref" path="lifefresh_prefs.xml" />
+    <exclude domain="file" path="custom_alarm.audio" />
+</full-backup-content>

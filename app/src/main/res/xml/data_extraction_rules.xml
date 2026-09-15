@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <!-- Prevent private CRM/account state from being restored to a different installation or user. -->
+        <exclude domain="database" path="." />
+        <exclude domain="sharedpref" path="lifefresh_active_account_prefs.xml" />
+        <exclude domain="sharedpref" path="lifefresh_sync_preferences.xml" />
+        <exclude domain="sharedpref" path="lifefresh_prefs.xml" />
+        <exclude domain="file" path="custom_alarm.audio" />
+    </cloud-backup>
+
+    <device-transfer>
+        <!-- Apply the same protection during cable/wireless device-to-device migration. -->
+        <exclude domain="database" path="." />
+        <exclude domain="sharedpref" path="lifefresh_active_account_prefs.xml" />
+        <exclude domain="sharedpref" path="lifefresh_sync_preferences.xml" />
+        <exclude domain="sharedpref" path="lifefresh_prefs.xml" />
+        <exclude domain="file" path="custom_alarm.audio" />
+    </device-transfer>
+</data-extraction-rules>
